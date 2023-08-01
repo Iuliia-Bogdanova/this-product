@@ -4,3 +4,6 @@ HTML, CSS, mobile first
 адаптивная семантическая верстка, разрешения 360px, 1440px
 анимированные кликабельные ссылки
 https://iuliia-bogdanova.github.io/this-ptoduct/
+
+
+<img src="./assets/img/requirements.png" alt="Requirements">
