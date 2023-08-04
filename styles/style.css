@@ -1,7 +1,5 @@
-/* font-family: 'Inter', sans-serif; */
-
 @font-face {
-    font-family: 'Inter-Regular', sans-serif;
+    font-family: 'Inter', sans-serif;
     src: url(../assets/fonts/Inter-Regular.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -9,7 +7,7 @@
 }
 
 @font-face {
-    font-family: 'Inter-SemiBold', sans-serif;
+    font-family: 'Inter', sans-serif;
     src: url(../assets/fonts/Inter-SemiBold.woff2) format('woff2');
     font-weight: 600;
     font-style: normal;
@@ -17,9 +15,100 @@
 }
 
 @font-face {
-    font-family: 'Inter-Bold', sans-serif;
+    font-family: 'Inter', sans-serif;
     src: url(../assets/fonts/Inter-Bold.woff2) format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
+}
+
+:root {
+    --dark-color: #2E323F;
+    --light-dark-color: #3B4050;
+    --light-color: #F1F1F1;
+    --accent-color: #A59678;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, 
+li {
+    list-style-type: none;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    min-width: 360px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    min-height: 56px;
+    background-color: var(--dark-color);
+}
+
+.nav {
+    margin: 16px 30px;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+    color: #F1F1F1;
+}
+
+.nav-list {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.nav-list__item:hover {
+    transition: all .2s ease;
+    transform: scale(0.95);
+    color: var(--accent-color);
+}
+
+@media (min-width: 1024px) {
+        .container {
+        max-width: 1600px;
+        padding: 0 64px;
+    }
+        .header {
+        min-height: 88px;
+    }
+        .nav {
+        margin: 32px 0;
+    }
+    .nav-list {
+        justify-content: flex-end;
+    }
 }
