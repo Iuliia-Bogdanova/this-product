@@ -13,7 +13,3 @@ RDCLR.SCHOOL week2 task1 - страница по макету из Figma.
 - контент ограничивается при разрешении экрана больше 1600px, цвета блоков тянутся на всю ширину вьюпорта
 
 - анимированная кнопка и навигация в шапке/подвале
-
-https://iuliia-bogdanova.github.io/this-ptoduct/  
-
-<img src="./assets/img/requirements.png" alt="Requirements">
