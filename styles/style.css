@@ -26,7 +26,7 @@
     --main-font-size: 17px;
     --dark-color: #2E323F;
     --light-dark-color: #3B4050;
-    --transparent-light-dark-color: rgba(59, 64, 80, 0.05);
+    --transparent-light-dark-color: rgba(59, 64, 80, 0.1);
     --light-color: #F1F1F1;
     --accent-color: #A59678;
     
@@ -102,8 +102,6 @@ h4 {
     min-width: 310px;
     margin: 0 auto;
     padding: 0 25px;
-
-    border: 1px solid red;
 }
 
 .header {
@@ -136,7 +134,6 @@ h4 {
     transition: all .2s ease;
     transform: scale(0.95);
     color: var(--accent-color);
-    cursor: pointer;
 }
 
 .hero {
@@ -149,15 +146,14 @@ h4 {
     margin: 0px auto;
     padding: 48px 0;
     color: var(--light-color);
-
-    /* border: 1px solid greenyellow; */
 }
 
-.hero__description {
-    margin-top: 26px;
+.title {
+    margin-bottom: 32px;
 }
 
 .hero__description-text {
+    margin-bottom: 24px;
     font-size: var(--main-font-size);
     font-weight: 400;
     line-height: 24px;
@@ -166,11 +162,9 @@ h4 {
 .hero__btn {
     width: 145px;
     height: 40px;
-    margin-top: 24px;
     border-radius: 16px;
     border: none;
     background: var(--accent-color);
-    
 }
 
 .hero__btn:hover {
@@ -201,8 +195,6 @@ h4 {
     margin: 0px auto;
     padding: 48px 0 8px;
     color: var(--dark-color);
-
-    border: 1px solid green;
 }
 
 .feature-item {
@@ -211,7 +203,6 @@ h4 {
 
 .feature__sub-title {
     margin-bottom: 16px;
-    
 }
 
 .feature-text {
@@ -223,12 +214,11 @@ h4 {
 .article__wrap {
     padding: 48px 0;
     align-items: flex-start;
-
-    border: 1px solid green;
 }
 
 .article__content {
     margin-bottom: 64px;
+    padding: 0 3px;
 }
 
 .sub-title {
@@ -240,7 +230,6 @@ h4 {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    padding-right: 4px;
 }
 
 .article__img {
@@ -286,7 +275,6 @@ h4 {
 
 .footer__wrap {
     padding: 72px 0 40px;
-    border: 1px solid green;
 }
 
 .contacts {
@@ -303,10 +291,7 @@ h4 {
 .info__item-title {
     margin-bottom: 12px;
 }
-.info__item-text {
-}
-.info__list {
-}
+
 .info__list-item:not(:last-child) {
     margin-bottom: 12px;
 }
@@ -336,19 +321,20 @@ h4 {
         padding: 0 5%;
         font-size: 64px;
         line-height: 72px;
+        margin-bottom: 0;
     }
     .hero__description {
         width: 50%;
-        padding: 40px 13%;
+        padding: 40px 12%;
         margin: 0;
     }
     .features__wrap {
         flex-direction: row;
         justify-content: space-between;
-        gap: 13%;
+        gap: 9%;
         padding: 64px 0 24px;
     }
-    .sub-title {
+    .feature__sub-title {
         margin-bottom: 32px;
     }
     .article__wrap {
