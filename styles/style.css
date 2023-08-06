@@ -23,11 +23,13 @@
 }
 
 :root {
+    --main-font-size: 17px;
     --dark-color: #2E323F;
     --light-dark-color: #3B4050;
     --transparent-light-dark-color: rgba(59, 64, 80, 0.05);
     --light-color: #F1F1F1;
     --accent-color: #A59678;
+    
 }
 
 html {
@@ -35,6 +37,12 @@ html {
 }
 
 *,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 *::after,
 *::before {
     box-sizing: inherit;
@@ -62,12 +70,40 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--light-color);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--light-color);
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--accent-color);
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--accent-color);
+}
+
 .container {
     min-width: 310px;
     margin: 0 auto;
     padding: 0 25px;
 
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .header {
@@ -95,10 +131,12 @@ body {
     text-transform: uppercase;
 }
 
-.nav-list__item:hover {
+.nav-list__item:hover,
+.info__list-item:hover {
     transition: all .2s ease;
     transform: scale(0.95);
     color: var(--accent-color);
+    cursor: pointer;
 }
 
 .hero {
@@ -112,21 +150,15 @@ body {
     padding: 48px 0;
     color: var(--light-color);
 
-    border: 1px solid greenyellow;
-}
-
-.title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 48px;
+    /* border: 1px solid greenyellow; */
 }
 
 .hero__description {
     margin-top: 26px;
-    margin-right: 4px;
-    font-size: 16px;
+}
+
+.hero__description-text {
+    font-size: var(--main-font-size);
     font-weight: 400;
     line-height: 24px;
 }
@@ -145,6 +177,7 @@ body {
     transition: all .2s ease;
     transform: scale(0.95);
     opacity: 0.8;
+    cursor: pointer;
 }
 
 .hero__btn-text {
@@ -176,18 +209,15 @@ body {
     margin-bottom: 40px;
 }
 
-.sub-title {
+.feature__sub-title {
     margin-bottom: 16px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.333;
-    color: var(--accent-color);
+    
 }
 
 .feature-text {
-    font-size: 16px;
+    font-size: var(--main-font-size);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 24px;
 }
 
 .article__wrap {
@@ -210,6 +240,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    padding-right: 4px;
 }
 
 .article__img {
@@ -239,16 +270,45 @@ body {
 }
 
 .step-title {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
     margin-bottom: 24px;
+    color: var(--light-color);
 }
 
 .step-text {
-    font-size: 16px;
+    font-size: var(--main-font-size);
     font-weight: 400;
     line-height: 24px;
+}
+
+.footer {
+    background-color: var(--light-dark-color);
+}
+
+.footer__wrap {
+    padding: 72px 0 40px;
+    border: 1px solid green;
+}
+
+.contacts {
+    margin-bottom: 40px;
+}
+
+.info__item {
+    font-size: var(--main-font-size);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--light-color);
+    margin-bottom: 32px;
+}
+.info__item-title {
+    margin-bottom: 12px;
+}
+.info__item-text {
+}
+.info__list {
+}
+.info__list-item:not(:last-child) {
+    margin-bottom: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -273,20 +333,20 @@ body {
     }
     .title {
         width: 50%;
-        padding: 0 71px;
+        padding: 0 5%;
         font-size: 64px;
         line-height: 72px;
     }
     .hero__description {
         width: 50%;
-        padding: 40px 161px;
+        padding: 40px 13%;
         margin: 0;
     }
     .features__wrap {
         flex-direction: row;
         justify-content: space-between;
-        gap: 142px;
-        padding: 64px 0;
+        gap: 13%;
+        padding: 64px 0 24px;
     }
     .sub-title {
         margin-bottom: 32px;
@@ -296,16 +356,32 @@ body {
         justify-content: space-between;
         flex-direction: row;
         padding: 64px 0;
-        gap: 64px;
+        gap: 8%;
     }
     .article__content {
         margin-bottom: 0;
     }
     .article__img {
         height: 526px;
-        margin: 40px 0;
+        margin: 48px 0;
     }
     .step {
         width: 312px;
+    }
+    .footer__wrap {
+        padding: 96px 0;
+    }
+    .contacts {
+        text-align: center;
+        margin-bottom: 64px;
+        font-size: 48px;
+        line-height: 1.33;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .info__item:first-child {
+        width: 25%;
     }
 }
