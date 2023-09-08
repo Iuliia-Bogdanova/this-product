@@ -28,7 +28,7 @@ feedback:
 
 даже просто в ul + li без aside или section и уже хорошо будет  
 
-article__content сделать article вместо div  
+article__content сделать article вместо div - done 
 
 Текст ссылок в шапке и кнопок можно было не отбивать вручную капсом, а сделать через text-transform: uppercase. - done already
 
